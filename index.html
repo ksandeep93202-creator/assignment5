@@ -5,7 +5,465 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="Assignment5.html">
+<style>
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  min-height:100vh;
+  background:linear-gradient(120deg,#565756,#2d2b2b);
+  display:flex;
+  justify-content:center;
+  padding:40px 0;
+}
+
+.main_box{
+  width:1100px;
+  background:#d8d6d6;
+  border-radius:12px;
+}
+
+/*  HEADER  */
+.header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 40px;
+  border-bottom:1px solid #eee;
+}
+
+.logo{
+  font-size:22px;
+  font-weight:bold;
+  color:#2f5f4a;
+}
+
+.logo span{
+  font-style:italic;
+  font-weight:normal;
+}
+
+.menu{
+  display:flex;
+  gap:22px;
+}
+
+.menu a{
+  text-decoration:none;
+  color:#777;
+  font-size:14px;
+}
+
+.menu a.active{
+  border-bottom:2px solid #2f5f53;
+}
+
+.search_box{
+  display:flex;
+  gap:10px;
+}
+
+.search_box input{
+  padding:7px 12px;
+  border-radius:20px;
+  border:1px solid #ddd;
+}
+
+.search_box button{
+  padding:7px 18px;
+  border-radius:20px;
+  border:none;
+  background:#f3cfc7;
+}
+
+/*  SLIDER  */
+.slider{
+  height: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+
+  background:
+    linear-gradient(rgba(35, 154, 152, 0.573)),
+    url(furniture1.jpg);
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+.circle{
+  width: 120px;
+  height: 120px;
+  background: rgb(4, 4, 4);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle_img img{
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  margin-top: 5px;
+}
+
+.title{
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  
+}
+
+
+/*  MAIN CONTENT  */
+.content{
+  display:flex;
+  padding:30px 40px;
+  gap:25px;
+  background:#e2e2e2;
+}
+
+.left{
+  width:65%;
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+
+.right{
+  width:35%;
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+
+.title{
+  font-size:20px;
+  color:#000000;
+}
+
+/*  BIG CARD  */
+.big_card{
+  background:white;
+  border-radius:10px;
+  display:flex;
+}
+
+.big_card img{
+  width:40%;
+  object-fit:cover;
+}
+
+.big_card_content{
+  padding:18px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.card_footer{
+  margin-top:auto;
+  display:flex;
+  justify-content:space-between;
+  color:#777;
+  font-size:12px;
+}
+
+/*  SECOND CARD  */
+.row_card{
+  background:white;
+  border-radius:10px;
+  display:flex;
+}
+
+.row_text{
+  width:45%;
+  padding:18px;
+}
+
+.row_images{
+  width:55%;
+  display:flex;
+  gap: 5px;
+}
+
+.row_images img{
+  width:50%;
+  object-fit:cover;
+  border-radius: 20px;
+ /* margin-right: -15px;*/
+ border: solid rgb(75,197,178);
+}
+
+/*  BOTTOM SMALL CARDS  */
+.small_cards{
+  display:flex;
+  gap:15px;
+}
+
+.small_card{
+  background:white;
+  border-radius:10px;
+  width:50%;
+}
+
+.small_card img{
+  width:90%;
+  margin-left: 15px;
+  margin-top: 10px;
+  border-radius: 20px;
+  border: solid rgb(75, 197, 178);
+  height:140px;
+  object-fit:cover;
+}
+
+.small_card div{
+  padding:12px;
+}
+
+/*  SIDE BAR  */
+.newsletter{
+  background:#fcebe7;
+  padding:20px;
+  border-radius:14px;
+}
+
+.newsletter input{
+  width:100%;
+  padding:8px;
+  border-radius:20px;
+  border:1px solid #e6bcb3;
+  margin-left: -8px;
+}
+
+.newsletter button{
+  width:100%;
+  margin-top:12px;
+  padding:9px;
+  border-radius:20px;
+  border:none;
+  background:#1f5b4a;
+  color:white;
+}
+
+.side_box{
+  background:#fdeeee;
+  padding:18px;
+  border-radius:14px;
+  height: 335px;
+}
+
+.side_grid{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+}
+
+.side_item{
+  width:70px;
+  text-align:center;
+  font-size:11px;
+}
+
+.side_item img{
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  object-fit:cover;
+}
+
+.follow{
+  background:#1f5b4a;
+  padding:20px;
+  border-radius:14px;
+  color:white;
+}
+
+.follow_icons{
+  display:flex;
+  gap:12px;
+  margin-top:12px;
+}
+
+.follow_icons img{
+  width:32px;
+  height:32px;
+  background:white;
+  color:#1f5b4a;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+</style>
 </head>
+
 <body>
+
+<div class="main_box">
+
+    <!-- HEADER -->
+    <div class="header">
+        <div class="logo">MY BLOG <span>Sujit Kumar</span></div>
+
+        <div class="menu">
+            <a class="active">Home</a>
+            <a>About</a>
+            <a>Features</a>
+            <a>Categories</a>
+            <a>Contact</a>
+        </div>
+
+        <div class="search_box">
+            <input placeholder="Search">
+            <button>Search</button>
+            </div>
+    </div>
+
+ <!-- SLIDER -->
+    <div class="slider">
+        <div class="item">
+            <div class="circle">
+                <div class="circle_img">
+                    <img src="chair 2.jpg">
+                </div>
+            </div>
+            <p class="title">Your title</p>
+        </div>
+
+        <div class="item">
+            <div class="circle">
+                <div class="circle_img">
+                    <img src="chair image.jpg">
+                </div>
+            </div>
+            <p class="title">Your title</p>
+        </div>
+
+        <div class="item">
+            <div class="circle">
+                <div class="circle_img">
+                    <img src="sofa.jpg">
+                </div>
+            </div>
+            <p class="title">Your title</p>
+        </div>
+
+        <div class="item">
+            <div class="circle">
+                <div class="circle_img">
+                    <img src="dining table.webp">
+                </div>
+            </div>
+            <p class="title">Your title</p>
+        </div>
+    </div>
+
+        
+        <!-- CONTENT -->
+    <div class="content">
+
+        <!-- LEFT -->
+        <div class="left">
+            <div class="title">Features</div>
+
+            <div class="big_card">
+                <img src="almirah image.webp">
+                <div class="big_card_content">
+                    <h3>Your title here</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+
+                    <div class="card_footer">
+                        <span>1 Comment</span>
+                        <span>Share </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row_card">
+            <div class="row_text">
+                <h3>Your title here</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
+
+            <div class="row_images">
+                <img src="night image.jpg">
+                <img src="bed image.jpg">
+            </div>
+            </div>
+
+            <div class="small_cards">
+            <div class="small_card">
+                <img src="sofa.jpg">
+                <div>Small post</div>
+                </div>
+
+                <div class="small_card">
+                    <img src="night image.jpg">
+                    <div>Small post</div>
+                </div>
+            </div>
+        </div>
+
+        
+        <!-- RIGHT -->
+        <div class="right">
+
+            <div class="newsletter">
+                <h3>News Letter</h3>
+                <input placeholder="Your email address">
+                <button>Sign Up</button>
+            </div>
+
+            <div class="side_box">
+                <h3>Design Preview</h3>
+                <div class="side_grid">
+                        <div class="side_item">
+                            <img src="chair 2.jpg">
+                            Lorem
+                        </div>
+
+                        <div class="side_item">
+                            <img src="sofa.jpg">
+                            Lorem
+                        </div>
+
+                        <div class="side_item">
+                            <img src="night image.jpg">
+                            Lorem
+                        </div>
+
+                        <div class="side_item">
+                            <img src="bed image.jpg">
+                            Lorem
+                        </div>
+                </div>
+            </div>
+
+            
+            <div class="follow">
+                <h3>Follow</h3>
+                <div class="follow_icons">
+                    <div><img src="../instagram-removebg-preview.png" alt=""></div>
+                    <div><img src="../facebook-removebg-preview.png" alt=""></div>
+                    <div><img src="../twitter-removebg-preview.png" alt=""></div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
 </body>
 </html>
